@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çarpım Tablosu Oyunu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      color: #333;
+    }
+    .question {
+      font-size: 1.8em;
+      margin: 20px 0;
+    }
+    input[type="number"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .message {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+    .success {
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+    .scoreboard {
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Çarpım Tablosu Oyunu</h1>
+    <p class="question" id="question">Soru yüklenecek...</p>
+    <input type="number" id="answerInput" placeholder="Cevabınızı yazın">
+    <button onclick="checkAnswer()">Cevabı Kontrol Et</button>
+    <button onclick="nextQuestion()">Yeni Soru</button>
+    <div class="message" id="message"></div>
+    <div class="scoreboard" id="scoreboard"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
